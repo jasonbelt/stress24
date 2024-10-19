@@ -26,8 +26,6 @@ jobs:
           
           git clone https://github.com/sireum/logika-examples
 
-          %SIREUM_HOME%\bin\sireum.bat
-
           echo before verify
           logika-examples\bin\verify.cmd
           echo "past verify.cmd"
