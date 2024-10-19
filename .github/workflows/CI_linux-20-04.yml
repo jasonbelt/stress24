@@ -28,19 +28,6 @@ jobs:
           echo "--------------"
           cat $SIREUM_HOME/versions.properties
 
-          # Z3 4.12+ requires glibc 2.35+ but ubuntu-20.04 provides glibc 2.31 so replace
-          # the Z3 Sireum provides with Z3 2.31
-          #curl -JLso ~/Downloads/z3-4.11.2-x64-glibc-2.31.zip https://github.com/Z3Prover/z3/releases/download/z3-4.11.2/z3-4.11.2-x64-glibc-2.31.zip
-          #unzip ~/Downloads/z3-4.11.2-x64-glibc-2.31.zip
-          #ls -alig $SIREUM_HOME/bin/linux
-          #rm -rf $SIREUM_HOME/bin/linux/z3
-          #ls -alig $SIREUM_HOME/bin/linux
-          #mv ~/z3-4.11.2-x64-glibc-2.31 $SIREUM_HOME/bin/linux/z3
-          
-          #ls -alig $SIREUM_HOME/bin/linux
-
-          $SIREUM_HOME/bin/linux/z3/bin/z3 --version
-
           git clone https://github.com/jasonbelt/logika-examples.git
           logika-examples/bin/verify.cmd
           "${SIREUM_HOME}/bin/sireum" proyek ive logika-examples
