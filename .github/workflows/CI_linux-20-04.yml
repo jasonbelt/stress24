@@ -26,7 +26,7 @@ jobs:
           # the Z3 Sireum provides with Z3 2.31
           curl -JLso ~/Downloads/z3-4.11.2-x64-glibc-2.31.zip https://github.com/Z3Prover/z3/releases/download/z3-4.11.2/z3-4.11.2-x64-glibc-2.31.zip
           unzip ~/Downloads/z3-4.11.2-x64-glibc-2.31.zip
-          rm $SIREUM_HOME/bin/linux/z3
+          rm -rf $SIREUM_HOME/bin/linux/z3
           mv ~/z3-4.11.2-x64-glibc-2.31 $SIREUM_HOME/bin/linux/z3
 
           $SIREUM_HOME/bin/linux/z3/bin/z3 --version
