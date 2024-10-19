@@ -23,6 +23,7 @@ jobs:
           echo ----d--d-d-d
           echo cwd -- %cd%
           cd /d %USERPROFILE%\Applications
+          echo cwd -- %cd%
           echo --ddiring---
           dir
           tar xf %USERPROFILE%\Downloads\sireum-ive-win-amd64.zip
