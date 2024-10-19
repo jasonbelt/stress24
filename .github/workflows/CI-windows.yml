@@ -22,6 +22,8 @@ jobs:
           echo ----d--d-d-d
           echo cwd -- %cd%
           cd "%USERPROFILE%\Applications"
+          echo --ddiring---
+          dir
           echo cwd after cd'ing -- %cd%
           cd Applications
           echo cwd after cd'ing 2 -- %cd%
