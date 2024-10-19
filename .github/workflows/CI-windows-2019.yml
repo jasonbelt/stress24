@@ -1,4 +1,4 @@
-name: Windows (amd64)
+name: Windows 2019 (amd64)
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 jobs:
 
   ci:
-    runs-on: windows-latest
+    runs-on: windows-2019
     steps:
       - name: Test
         shell: cmd

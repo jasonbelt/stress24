@@ -1,4 +1,4 @@
-name: Linux (amd64)
+name: Linux 22.04 (amd64)
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 jobs:
 
   ci:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Test
         run: |
