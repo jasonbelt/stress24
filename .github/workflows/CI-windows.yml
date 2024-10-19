@@ -22,7 +22,8 @@ jobs:
           tar xf %USERPROFILE%\Downloads\org.sireum.library.m2.zip
 
           set SIREUM_HOME=%USERPROFILE%\Applications\Sireum
-          git clone https://github.com/sireum/logika-examples
+          
+          git clone git clone https://github.com/sireum/logika-examples
           dir
           dir /B logika-examples
           logika-examples\bin\verify.cmd
