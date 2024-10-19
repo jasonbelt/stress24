@@ -23,8 +23,9 @@ jobs:
           export SIREUM_HOME=~/Applications/Sireum
           
           cat $SIREUM_HOME/versions.properties
-          #sed -i '/.*z3.*/c\This line is removed by the admin.' /tmp/foo
-
+          #sed -i '/.*z3.*/org.sireum.version.z3=4.11.2' $SIREUM_HOME/versions.properties
+          cat $SIREUM_HOME/versions.properties
+          
           # Z3 4.12+ requires glibc 2.35+ but ubuntu-20.04 provides glibc 2.31 so replace
           # the Z3 Sireum provides with Z3 2.31
           #curl -JLso ~/Downloads/z3-4.11.2-x64-glibc-2.31.zip https://github.com/Z3Prover/z3/releases/download/z3-4.11.2/z3-4.11.2-x64-glibc-2.31.zip
