@@ -13,6 +13,7 @@ jobs:
         shell: cmd
         run: |
           set SIREUM_V=4.20241017.f6e1eff
+          echo userprofile -- %USERPROFILE%
           md "%USERPROFILE%\Applications"
           md "%USERPROFILE%\Downloads"
           echo ---userprofile dir----
