@@ -48,6 +48,6 @@ jobs:
 
           %SIREUM_HOME%\bin\sireum.bat
 
-          %SIREUM_HOME%\bin\sireum.bat slang run logika-examples\bin\verify.cmd
+          logika-examples\bin\verify.cmd
           echo "past verify.cmd"
           "%SIREUM_HOME%\bin\sireum.bat" proyek ive logika-examples
