@@ -13,7 +13,9 @@ jobs:
         shell: cmd
         run: |
           set SIREUM_V=4.20241017.f6e1eff
-          md %USERPROFILE%\Applications %USERPROFILE%\Downloads 2> nul
+          md %USERPROFILE%\Applications %USERPROFILE%\Downloads
+          dir /B %USERPROFILE%
+          echo -----
           curl -JLso %USERPROFILE%\Downloads\sireum-ive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/%SIREUM_V%/sireum-ive-win-amd64.zip
           curl -JLso %USERPROFILE%\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/%SIREUM_V%/org.sireum.library.m2.zip  
           cd %USERPROFILE%\Applications
@@ -35,6 +37,8 @@ jobs:
           echo ---sireumhome
           dir /B %SIREUM_HOME%
           echo ---
+
+
 
           %SIREUM_HOME%\bin\sireum.bat
 
