@@ -24,11 +24,11 @@ jobs:
           set SIREUM_HOME=%USERPROFILE%\Applications\Sireum
           
           git clone https://github.com/sireum/logika-examples
-          dir
-          dir /B logika-examples
+          
+          dir %SIREUM_HOME%
 
           %SIREUM_HOME%\bin\sireum.bat
-          
+
           %SIREUM_HOME%\bin\sireum.bat slang run logika-examples\bin\verify.cmd
           echo "past verify.cmd"
           "%SIREUM_HOME%\bin\sireum.bat" proyek ive logika-examples
