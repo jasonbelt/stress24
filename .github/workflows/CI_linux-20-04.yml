@@ -24,7 +24,7 @@ jobs:
           
           cat $SIREUM_HOME/versions.properties
           echo "--------------"
-          sed -i '/.*z3.*/org.sireum.version.z3=4.11.2' $SIREUM_HOME/versions.properties
+          sed -i '/.*z3.*/c\org.sireum.version.z3=4.11.2' $SIREUM_HOME/versions.properties
           echo "--------------"
           cat $SIREUM_HOME/versions.properties
 
