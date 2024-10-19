@@ -21,14 +21,11 @@ jobs:
           curl -JLso %USERPROFILE%\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/%SIREUM_V%/org.sireum.library.m2.zip  
           echo ----d--d-d-d
           echo cwd -- %cd%
-          cd "%USERPROFILE%\Applications"
+          cd /d "%USERPROFILE%\Applications"
           echo --ddiring---
           dir
-          echo cwd after cd'ing -- %cd%
-          cd Applications
-          echo cwd after cd'ing 2 -- %cd%
           tar xf %USERPROFILE%\Downloads\sireum-ive-win-amd64.zip
-          cd "%USERPROFILE%"
+          cd /d "%USERPROFILE%"
           tar xf %USERPROFILE%\Downloads\org.sireum.library.m2.zip
 
           set SIREUM_HOME=%USERPROFILE%\Applications\Sireum
