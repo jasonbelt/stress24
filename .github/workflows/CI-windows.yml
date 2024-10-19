@@ -22,7 +22,7 @@ jobs:
           curl -JLso %USERPROFILE%\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/%SIREUM_V%/org.sireum.library.m2.zip  
           echo ----d--d-d-d
           echo cwd -- %cd%
-          cd /d "%USERPROFILE%\Applications"
+          cd /d %USERPROFILE%\Applications
           echo --ddiring---
           dir
           tar xf %USERPROFILE%\Downloads\sireum-ive-win-amd64.zip
