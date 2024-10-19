@@ -24,8 +24,15 @@ jobs:
           set SIREUM_HOME=%USERPROFILE%\Applications\Sireum
           
           git clone https://github.com/sireum/logika-examples
-          
-          dir %SIREUM_HOME%
+          echo ---
+          dir / B %USERPROFILE%\Downloads\
+          echo ---
+          dir /B %USERPROFILE%
+          echo ---
+          dir /B %USERPROFILE%\Applications
+          echo ---
+          dir /B %SIREUM_HOME%
+          echo ---
 
           %SIREUM_HOME%\bin\sireum.bat
 
