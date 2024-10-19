@@ -13,19 +13,11 @@ jobs:
         shell: cmd
         run: |
           set SIREUM_V=4.20241017.f6e1eff
-          echo userprofile -- %USERPROFILE%
           md "%USERPROFILE%\Applications"
           md "%USERPROFILE%\Downloads"
-          echo ---userprofile dir----
-          dir /B %USERPROFILE%
           curl -JLso %USERPROFILE%\Downloads\sireum-ive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/%SIREUM_V%/sireum-ive-win-amd64.zip
           curl -JLso %USERPROFILE%\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/%SIREUM_V%/org.sireum.library.m2.zip  
-          echo ----d--d-d-d
-          echo cwd -- %cd%
           cd /d %USERPROFILE%\Applications
-          echo cwd -- %cd%
-          echo --ddiring---
-          dir
           tar xf %USERPROFILE%\Downloads\sireum-ive-win-amd64.zip
           cd /d "%USERPROFILE%"
           tar xf %USERPROFILE%\Downloads\org.sireum.library.m2.zip
@@ -33,20 +25,10 @@ jobs:
           set SIREUM_HOME=%USERPROFILE%\Applications\Sireum
           
           git clone https://github.com/sireum/logika-examples
-          
-          echo ---donwloads
-          dir / B %USERPROFILE%\Downloads\
-          echo ---home
-          dir /B %USERPROFILE%
-          echo ---applications
-          dir /B %USERPROFILE%\Applications
-          echo ---sireumhome
-          dir /B %SIREUM_HOME%
-          echo ---
 
           %SIREUM_HOME%\bin\sireum.bat
 
           echo before verify
           logika-examples\bin\verify.cmd
           echo "past verify.cmd"
-          "%SIREUM_HOME%\bin\sireum.bat" proyek ive logika-examples
+          %SIREUM_HOME%\bin\sireum.bat proyek ive logika-examples
