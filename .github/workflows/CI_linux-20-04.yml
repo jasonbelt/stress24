@@ -22,7 +22,9 @@ jobs:
 
           export SIREUM_HOME=~/Applications/Sireum
           
-          ls $SIREUM_HOME/bin/linux/.z3/
+          echo "bin/linux dir"
+          ls -laig $SIREUM_HOME/bin/linux
+
           cat $SIREUM_HOME/bin/linux/.z3/VER
 
           # Z3 4.12+ requires glibc 2.35+ but ubuntu-20.04 provides glibc 2.31 so replace
@@ -33,6 +35,7 @@ jobs:
           rm -rf $SIREUM_HOME/bin/linux/z3
           ls -alig $SIREUM_HOME/bin/linux
           mv ~/z3-4.11.2-x64-glibc-2.31 $SIREUM_HOME/bin/linux/z3
+          
           ls -alig $SIREUM_HOME/bin/linux
 
           $SIREUM_HOME/bin/linux/z3/bin/z3 --version
