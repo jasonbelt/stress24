@@ -44,10 +44,9 @@ jobs:
           dir /B %SIREUM_HOME%
           echo ---
 
-
-
           %SIREUM_HOME%\bin\sireum.bat
 
+          echo before verify
           logika-examples\bin\verify.cmd
           echo "past verify.cmd"
           "%SIREUM_HOME%\bin\sireum.bat" proyek ive logika-examples
