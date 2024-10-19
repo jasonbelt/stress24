@@ -26,6 +26,7 @@ jobs:
           # the Z3 Sireum provides with Z3 2.31
           curl -JLso ~/Downloads/z3-4.11.2-x64-glibc-2.31.zip https://github.com/Z3Prover/z3/releases/download/z3-4.11.2/z3-4.11.2-x64-glibc-2.31.zip
           unzip ~/Downloads/z3-4.11.2-x64-glibc-2.31.zip
+          ls -laig ~/Downloads
           mv ~/Downloads/z3-4.11.2-x64-glibc-2.31 $SIREUM_HOME/bin/linux/z3
           
           git clone https://github.com/sireum/logika-examples
